@@ -1,0 +1,10 @@
+The profile first will support two combinations.
+1) "srs UE + srs eNB + MobileStream"
+2) "emulated eNBs in OpenEPC + MobileStream"
+
+Then, I will add below combination after testing some functions.
+3) "N5 + ip.access + MobileStream"
+
+
+
+
