@@ -175,12 +175,16 @@ if params.TYPE == "Emulator":
 
     # Create the requested number of eNodeB nodes
     for i in range(1, params.NUMENB + 1):
+        ip_prefix="192.168.4.8%d"
         ename = "enb%d" % i
         enb = PN.mkepcnode(ename, PN.EPCROLES.ENODEB, hname = ename)
         enb.exclusive = True
         rspec.addResource(enb)
         mgmt.addMember(enb)
-        net_d.addMember(enb)
+        ip = ip_prefix % i
+        cintf = net_d.addMember(enb)
+        caddr = PG.IPv4Address(ip, netmask)
+        cintf.addAddress(caddr)
         an_lte.addMember(enb)
 else:
     # add sdr enb
