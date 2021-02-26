@@ -111,7 +111,7 @@ if params.NUMSTORM < 1 or params.NUMSTORM > 10:
     pc.reportError(perr)
     pass
 
-if params.NUMENB < 1 or params.NUMENB > 3:
+if params.NUMENB < 1 or params.NUMENB > 5:
     perr = portal.ParameterError("You cannot ask for fewer than one or more than three eNodeB nodes!", ['NUMENB'])
     pc.reportError(perr)
     pass
