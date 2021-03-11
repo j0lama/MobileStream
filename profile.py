@@ -21,6 +21,7 @@ class GLOBALS(object):
     EPCIMG = URN.Image(PN.PNDEFS.PNET_AM, "PhantomNet:OEPC-more-events.V2")
     MSIMG = "urn:publicid:IDN+emulab.net+image+PhantomNet:mobilestream-v1"
     SRSLTE="urn:publicid:IDN+emulab.net+image+PhantomNet:srsLTE"
+    OPENEPC = "urn:publicid:IDN+emulab.net+image+PhantomNet:UBUNTU12-MODOEPC"
 #
 # Create our in-memory model of the RSpec -- the resources we're going
 # to request in our experiment, and their configuration.
@@ -142,7 +143,7 @@ if params.HWTYPE == "pc":
 # Set the hardware and image for the epc node factory function
 #
 PN.EPCNodeFactorySettings.hardware_type = params.HWTYPE
-PN.EPCNodeFactorySettings.disk_image = GLOBALS.EPCIMG
+PN.EPCNodeFactorySettings.disk_image = GLOBALS.OPENEPC
 
 #
 # Create the lans we need
