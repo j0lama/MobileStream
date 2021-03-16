@@ -143,7 +143,7 @@ if params.HWTYPE == "pc":
 # Set the hardware and image for the epc node factory function
 #
 PN.EPCNodeFactorySettings.hardware_type = params.HWTYPE
-PN.EPCNodeFactorySettings.disk_image = GLOBALS.OPENEPC
+PN.EPCNodeFactorySettings.disk_image = GLOBALS.EPCIMG
 
 #
 # Create the lans we need
